@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:googlemap2/authotication/register.dart';
 import 'package:googlemap2/pages/map_page.dart';
 
 class LoginPage extends StatefulWidget {
@@ -73,7 +74,25 @@ class _LoginPageState extends State<LoginPage> {
                 "LOGIN",
                 style: TextStyle(color: Colors.black, fontSize: 30),
               ),
-            )
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+              child: TextButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (c) => SignUpScreen()));
+                },
+                style:
+                    TextButton.styleFrom(backgroundColor: Colors.transparent),
+                child: const Text(
+                  "REGISTER",
+                  style: TextStyle(color: Colors.black, fontSize: 15),
+                ),
+              ),
+            ),
           ],
         ),
       ),
