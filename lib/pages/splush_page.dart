@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:googlemap2/authotication/log_in.dart';
+import 'package:googlemap2/authotication/login1.dart';
 
 class SplushScreen extends StatefulWidget {
   const SplushScreen({super.key});
@@ -13,7 +13,12 @@ class SplushScreen extends StatefulWidget {
 class _SplushScreenState extends State<SplushScreen> {
   startTime() {
     Timer(const Duration(seconds: 5), () async {
-      Navigator.push(context, MaterialPageRoute(builder: (c) => LoginPage()));
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (c) => LoginPage1(
+                    onTap: () {},
+                  )));
     });
   }
 
